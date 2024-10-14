@@ -6,5 +6,5 @@ def title(text: str) -> rx.Component:
     return rx.heading(
             text,
             size="lg",
-            style=styles.title_style
+            style=styles.title_style,
     )

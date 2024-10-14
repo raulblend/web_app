@@ -18,6 +18,6 @@ def navbar() -> rx.Component:
         padding_x=Size.BIG.value,
         padding_y=Size.DEFAULT.value,
         z_index="999",
-        top="0"
+        #top="0"
 
     ),

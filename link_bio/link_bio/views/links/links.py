@@ -1,6 +1,7 @@
 import reflex as rx
 from link_bio.components.link_button import link_button
 from link_bio.components.title import title
+from link_bio.styles.colors import TextColor as TextColor
 
 def links() -> rx.Component:
     return rx.vstack(
