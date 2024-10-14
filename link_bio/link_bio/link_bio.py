@@ -1,7 +1,12 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 import reflex as rx
-
+from link_bio.components.navbar import navbar
+from link_bio.components.footer import footer
+from link_bio.views.header.header import header
+from link_bio.views.links.links import links
+import link_bio.styles.styles as styles
+from link_bio.styles.styles import Size as Size
 from rxconfig import config
 
 
@@ -13,38 +18,26 @@ class State(rx.State):
 
 def index() -> rx.Component:
     # Welcome Page (Index)
-    return rx.container(
-        rx.color_mode.button(position="top-right"),
-        rx.vstack(
-            rx.image(
-                src="/photo.png",
-                width="200px",
-                height="auto",
-                margin="0 auto",
-                border_radius="15px 50px",
-                border="5px solid transparent",
-                background="linear-gradient(135deg, #F58529, #DD2A7B, #8134B8, #A32DB6)",
-                background_clip="border-box",
-                # border="5px solid #555",
+    return rx.box(
+        navbar(),
+        rx.center(
+            rx.vstack(
+                header(),
+                links(),
+                rx.color_mode.button(position="top-right"),
+                max_width=styles.MAX_WIDTH,
+                width="100%",
+                margin_y=Size.BIG.value,
             ),
-            rx.heading("Welcome Raúl!", size="9"),
-            rx.text(
-                "Get started by editing ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
-                size="5",
-            ),
-            rx.link(
-                rx.button("Check out our docs!"),
-                href="https://reflex.dev/docs/getting-started/introduction/",
-                is_external=True,
-            ),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
+
         ),
-        rx.logo(),
+        rx.center(
+            footer(),
+        )
     )
 
 
-app = rx.App()
+app = rx.App(
+    style=styles.BASE_STYLE
+)
 app.add_page(index)
