@@ -19,5 +19,7 @@ def header() -> rx.Component:
         rx.text("Devops Engineer", size="6"),
         rx.text("""Soy un apasionado de la tecnología con experiencia práctica en DevOps, automatización de infraestructuras, scripting en Bash, y lenguajes como Golang y Python. Cuento con la certificación Azure Fundamentals (AZ-900) y he trabajado en proyectos que fortalecen mis habilidades en DevOps, Jenkins, automatización en la nube, y scripting en Bash.
                 Estoy en búsqueda de una oportunidad en un equipo dinámico, donde pueda seguir desarrollándome como DevOps Engineer y contribuir con soluciones innovadoras que optimicen la automatización y la eficiencia.""",
-                color= TextColor.BODY.value)
-        )
+                color= TextColor.BODY.value),
+                padding="1em"
+        ),
+        

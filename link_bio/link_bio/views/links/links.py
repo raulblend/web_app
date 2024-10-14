@@ -25,6 +25,7 @@ def links() -> rx.Component:
             "Explora mis repositorios para ver ejemplos de scripts automatizados, despliegues y más. ¡no dudes en contactarme!", 
             "https://github.com/raulblend"
             ),
-        width="100%"
+        width="100%",
+        padding="1em"
 
     )

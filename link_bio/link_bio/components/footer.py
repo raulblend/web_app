@@ -5,7 +5,7 @@ from link_bio.styles.colors import TextColor as TextColor
 def footer() -> rx.Component:
     return rx.vstack(
         rx.link(
-            f"2022-{datetime.date.today().year} BY Raulblend",
+            f"2022-{datetime.date.today().year} by Raulblend",
             href="https://www.linkedin.com/in/raul-espinoza-a320032b2/",
             is_external=True
         ),
